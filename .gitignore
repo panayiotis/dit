@@ -1,3 +1,7 @@
+*~
+*.bak
+/spec/
+
 *.gem
 *.rbc
 /.config

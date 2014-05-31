@@ -1,0 +1,10 @@
+#!/bin/env ruby
+# encoding: utf-8
+
+require 'colored'
+
+require_relative '../lib/courses'
+
+@courses = Courses.new ARGV[0] , ARGV[1]
+
+@courses.print_all
