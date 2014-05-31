@@ -126,7 +126,7 @@ class Courses
     tmp = by_category('Γενικης Παιδειας').size
     puts "άλλα #{5 - tmp} Γενικης Παιδειας".blue if tmp < 5
     
-    puts "+ Πτυχιακή".blue
+    #puts "+ Πτυχιακή".blue
     puts "\nΜέσος Όρος".green
     
     marks = Array.new
@@ -158,7 +158,7 @@ class Courses
       sum+= m[:mark]*1.5
       total+=1.5
     end
-    puts "#{'.3f' % (sum/total)}".red
+    puts "#{'%.3f'%(sum/total)}".red
   end
     
 end # class
