@@ -2,9 +2,25 @@
 # encoding: utf-8
 
 require 'colored'
+require 'yaml'
 
 require_relative '../lib/courses'
-
-@courses = Courses.new ARGV[0] , ARGV[1]
+if ARGV.size == 2
+ @username = ARGV[0]
+ @password = ARGV[1]
+elsif File.exists? File.expand_path "~/.dit.yml"
+ array = YAML.load_file File.expand_path "~/.dit.yml"
+ @username = array[0]
+ @password = array[1]
+else
+puts "Usage"
+puts "dit username password"
+puts "or create the file .dit.yml in your home directory like this:"
+puts "---"
+puts "- username"
+puts "- password"
+exit 0
+end
+@courses = Courses.new @username , @password
 
 @courses.print_all
