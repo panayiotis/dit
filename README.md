@@ -1,11 +1,19 @@
 dit
-
 ===
-
-
-
 DIT courses command line application
 
+## Usage
+dit username password
+
+## Config file
+.dit.yml
+<pre>
+---
+- username
+- password
+</pre>
+
+## Example Output
 <pre>
                           Βασικα Πρωτης Κατευθυνσης  (1, 10.0)                           
 ΥΠΟΛΟΓΙΣΤΙΚΗ ΓΕΩΜΕΤΡΙΑ                              10 2012 Σ Βασικα Πρωτης Κατευθυνσης
